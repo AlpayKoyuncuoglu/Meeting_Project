@@ -79,15 +79,7 @@ namespace JwtAuthExample.Controllers
             };
 
             _context.Users.Add(user);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception e)
-            {
-
-                throw e;
-            }
+            await _context.SaveChangesAsync();
             var emailService = HttpContext.RequestServices.GetService<IEmailService>();
             if (emailService == null)
             {
@@ -135,7 +127,7 @@ namespace JwtAuthExample.Controllers
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials);
 
-           
+
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
