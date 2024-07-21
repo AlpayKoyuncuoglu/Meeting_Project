@@ -1,4 +1,4 @@
-﻿using MeetingProject.Context;
+using MeetingProject.Context;
 using MeetingProject.Model.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,12 +17,14 @@ namespace MeetingProject.Web.Controllers
             _context = context;
         }
 
+        // GET: api/meetings
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Meeting>>> GetMeetings()
         {
             return await _context.Meetings.ToListAsync();
         }
 
+        // GET: api/meetings/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Meeting>> GetMeeting(int id)
         {
@@ -36,15 +38,17 @@ namespace MeetingProject.Web.Controllers
             return meeting;
         }
 
+        // POST: api/meetings
         [HttpPost]
         public async Task<ActionResult<Meeting>> PostMeeting(Meeting meeting)
         {
             _context.Meetings.Add(meeting);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetMeeting", new { id = meeting.Id }, meeting);
+            return CreatedAtAction(nameof(GetMeeting), new { id = meeting.Id }, meeting);
         }
 
+        // PUT: api/meetings/5
         [HttpPut("{id}")]
         public async Task<IActionResult> PutMeeting(int id, Meeting meeting)
         {
@@ -74,6 +78,7 @@ namespace MeetingProject.Web.Controllers
             return NoContent();
         }
 
+        // DELETE: api/meetings/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMeeting(int id)
         {

@@ -1,13 +1,9 @@
 ﻿using MeetingProject.Context;
 using MeetingProject.Model.Dtos;
 using MeetingProject.Model.Entities;
-using MeetingProject.Web;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
 using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Security.Claims;
 using System.Text;
 
@@ -19,53 +15,22 @@ namespace JwtAuthExample.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly ApplicationDbContext _context;
+        private readonly IWebHostEnvironment _env;
 
-        public AuthController(IConfiguration configuration, ApplicationDbContext context)
+        public AuthController(IConfiguration configuration, ApplicationDbContext context, IWebHostEnvironment env)
         {
             _configuration = configuration;
             _context = context;
+            _env = env;
         }
-
-        //[HttpPost("register")]
-        //public IActionResult Register([FromBody] User userRegister)
-        //{
-        //    if (_context.Users.Any(u => u.Username == userRegister.Username))
-        //    {
-        //        return BadRequest("Username already exists");
-        //    }
-
-        //    var user = new User
-        //    {
-        //        Username = userRegister.Username,
-        //        Password = BCrypt.Net.BCrypt.HashPassword(userRegister.Password) // Şifreyi hashleyin
-        //    };
-
-        //    _context.Users.Add(user);
-        //    _context.SaveChanges();
-
-
-        //    return Ok("User registered successfully");
-        //}
 
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromForm] UserRegisterDto userRegister)
         {
-            if (_context.Users.Any(u => u.Username == userRegister.Username))
+            if (_context.Users.Any(u => u.Email == userRegister.Email))
             {
-                return BadRequest("Username already exists");
+                return BadRequest("Email already exists");
             }
-
-            // Profil resmini kaydedin ve yolunu alın
-            //string profilePicturePath = null;
-            //if (userRegister.ProfilePicture != null)
-            //{
-            //    var filePath = Path.Combine("wwwroot/uploads", userRegister.ProfilePicture.FileName);
-            //    using (var stream = new FileStream(filePath, FileMode.Create))
-            //    {
-            //        await userRegister.ProfilePicture.CopyToAsync(stream);
-            //    }
-            //    profilePicturePath = "/uploads/" + userRegister.ProfilePicture.FileName;
-            //}
 
             var user = new User
             {
@@ -75,21 +40,23 @@ namespace JwtAuthExample.Controllers
                 LastName = userRegister.LastName,
                 Email = userRegister.Email,
                 PhoneNumber = userRegister.PhoneNumber,
-                //ProfilePicture = profilePicturePath
+                ProfilePicture = userRegister.ProfilePicture
             };
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
-            var emailService = HttpContext.RequestServices.GetService<IEmailService>();
-            if (emailService == null)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, "Email service is not available.");
-            }
 
-            string subject = "Welcome to Our Application!";
-            string message = $"Hello {user.FirstName},<br><br>Thank you for registering.<br><br>Best regards,<br>Our Team";
 
-            await emailService.SendEmailAsync(user.Email, subject, message);
+            //var emailService = HttpContext.RequestServices.GetService<IEmailService>();
+            //if (emailService == null)
+            //{
+            //    return StatusCode(StatusCodes.Status500InternalServerError, "Email service is not available.");
+            //}
+
+            //string subject = "Welcome to Our Application!";
+            //string message = $"Hello {user.FirstName},<br><br>Thank you for registering.<br><br>Best regards,<br>Our Team";
+
+            //await emailService.SendEmailAsync(user.Email, subject, message);
 
             return Ok(new { success = true, message = "User registered successfully" });
         }
@@ -98,14 +65,14 @@ namespace JwtAuthExample.Controllers
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLogin userLogin)
         {
-            var user = _context.Users.SingleOrDefault(u => u.Username == userLogin.Username);
+            var user = _context.Users.SingleOrDefault(u => u.Email == userLogin.Email);
 
             if (user == null || !BCrypt.Net.BCrypt.Verify(userLogin.Password, user.Password))
             {
                 return Unauthorized();
             }
 
-            var tokenString = GenerateJWT(user.Username);
+            var tokenString = GenerateJWT(user.Email);
             return Ok(new { Token = tokenString });
         }
 
