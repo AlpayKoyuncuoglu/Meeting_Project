@@ -1,0 +1,14 @@
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\bin\Debug\net8.0\MeetingProject.Model.exe
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\bin\Debug\net8.0\MeetingProject.Model.deps.json
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\bin\Debug\net8.0\MeetingProject.Model.runtimeconfig.json
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\bin\Debug\net8.0\MeetingProject.Model.dll
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\bin\Debug\net8.0\MeetingProject.Model.pdb
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.AssemblyInfoInputs.cache
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.AssemblyInfo.cs
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.csproj.CoreCompileInputs.cache
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.dll
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\refint\MeetingProject.Model.dll
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.pdb
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\MeetingProject.Model.genruntimeconfig.cache
+C:\Users\ALPAY\Desktop\MeetingPro\MeetingProject\MeetingProject.Model\obj\Debug\net8.0\ref\MeetingProject.Model.dll

@@ -1,0 +1,6 @@
+@WebAPI.MeetingProject_HostAddress = http://localhost:5223
+
+GET {{WebAPI.MeetingProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
