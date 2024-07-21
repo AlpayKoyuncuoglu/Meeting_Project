@@ -1,4 +1,4 @@
-﻿using MeetingProject.Context;
+using MeetingProject.Context;
 using MeetingProject.Model.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
