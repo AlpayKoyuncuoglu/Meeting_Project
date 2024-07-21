@@ -11,5 +11,15 @@ namespace MeetingProject.Context
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Meeting> Meetings { get; set; } 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+        }
     }
 }
