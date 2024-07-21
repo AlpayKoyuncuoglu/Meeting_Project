@@ -9,7 +9,7 @@ namespace MeetingProject.Context
            : base(options)
         {
         }
-
+        public DbSet<Meeting> Meetings { get; set; }
         public DbSet<User> Users { get; set; }
     }
 }
