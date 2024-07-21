@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj": {}
+    "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj": {
+    "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj",
+        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj",
         "projectName": "MeetingProject.Context",
-        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj",
+        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj",
         "packagesPath": "C:\\Users\\ALPAY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\obj\\",
+        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALPAY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
-                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj"
+              "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
+                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj"
               }
             }
           }
@@ -84,14 +84,14 @@
         }
       }
     },
-    "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
+    "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
+        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
         "projectName": "MeetingProject.Model",
-        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
+        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
         "packagesPath": "C:\\Users\\ALPAY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\obj\\",
+        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALPAY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -144,14 +144,14 @@
         }
       }
     },
-    "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj": {
+    "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
+        "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
         "projectName": "MeetingProject.Web",
-        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
+        "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
         "packagesPath": "C:\\Users\\ALPAY\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\obj\\",
+        "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALPAY\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -168,11 +168,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj": {
-                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj"
+              "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj": {
+                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Context\\MeetingProject.Context.csproj"
               },
-              "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
-                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj"
+              "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj": {
+                "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj"
               }
             }
           }

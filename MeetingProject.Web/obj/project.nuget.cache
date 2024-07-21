@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Rs6EDRcBnvkg5viF2kYGegg+r2DtWz9wAjelTHkzrXO6gTLcSUJ2JqsNKw5+i39yfrAp9cQZmbndj/TIV9by6w==",
+  "dgSpecHash": "jFWu06l54vuB8D87LxuUaH8nyrcGjCglhSNVkmyTi56MfRN8a+Y8dQpl8oNiaDGht5VnjYqmq39J4nhRbVEdOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
+  "projectFilePath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Web\\MeetingProject.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALPAY\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\ALPAY\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

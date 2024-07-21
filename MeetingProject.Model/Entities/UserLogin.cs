@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MeetingProject.Model.Entities
+﻿namespace MeetingProject.Model.Entities
 {
     public class UserLogin
     {

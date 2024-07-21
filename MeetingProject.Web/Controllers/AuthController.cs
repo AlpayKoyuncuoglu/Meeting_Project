@@ -1,5 +1,7 @@
 ﻿using MeetingProject.Context;
+using MeetingProject.Model.Dtos;
 using MeetingProject.Model.Entities;
+using MeetingProject.Web;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -24,25 +26,82 @@ namespace JwtAuthExample.Controllers
             _context = context;
         }
 
+        //[HttpPost("register")]
+        //public IActionResult Register([FromBody] User userRegister)
+        //{
+        //    if (_context.Users.Any(u => u.Username == userRegister.Username))
+        //    {
+        //        return BadRequest("Username already exists");
+        //    }
+
+        //    var user = new User
+        //    {
+        //        Username = userRegister.Username,
+        //        Password = BCrypt.Net.BCrypt.HashPassword(userRegister.Password) // Şifreyi hashleyin
+        //    };
+
+        //    _context.Users.Add(user);
+        //    _context.SaveChanges();
+
+
+        //    return Ok("User registered successfully");
+        //}
+
         [HttpPost("register")]
-        public IActionResult Register([FromBody] User userRegister)
+        public async Task<IActionResult> Register([FromForm] UserRegisterDto userRegister)
         {
             if (_context.Users.Any(u => u.Username == userRegister.Username))
             {
                 return BadRequest("Username already exists");
             }
 
+            // Profil resmini kaydedin ve yolunu alın
+            //string profilePicturePath = null;
+            //if (userRegister.ProfilePicture != null)
+            //{
+            //    var filePath = Path.Combine("wwwroot/uploads", userRegister.ProfilePicture.FileName);
+            //    using (var stream = new FileStream(filePath, FileMode.Create))
+            //    {
+            //        await userRegister.ProfilePicture.CopyToAsync(stream);
+            //    }
+            //    profilePicturePath = "/uploads/" + userRegister.ProfilePicture.FileName;
+            //}
+
             var user = new User
             {
                 Username = userRegister.Username,
-                Password = BCrypt.Net.BCrypt.HashPassword(userRegister.Password) // Şifreyi hashleyin
+                Password = BCrypt.Net.BCrypt.HashPassword(userRegister.Password), // Şifreyi hashleyin
+                FirstName = userRegister.FirstName,
+                LastName = userRegister.LastName,
+                Email = userRegister.Email,
+                PhoneNumber = userRegister.PhoneNumber,
+                //ProfilePicture = profilePicturePath
             };
 
             _context.Users.Add(user);
-            _context.SaveChanges();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
 
-            return Ok("User registered successfully");
+                throw e;
+            }
+            var emailService = HttpContext.RequestServices.GetService<IEmailService>();
+            if (emailService == null)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, "Email service is not available.");
+            }
+
+            string subject = "Welcome to Our Application!";
+            string message = $"Hello {user.FirstName},<br><br>Thank you for registering.<br><br>Best regards,<br>Our Team";
+
+            await emailService.SendEmailAsync(user.Email, subject, message);
+
+            return Ok(new { success = true, message = "User registered successfully" });
         }
+
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] UserLogin userLogin)
@@ -76,6 +135,7 @@ namespace JwtAuthExample.Controllers
                 expires: DateTime.Now.AddMinutes(30),
                 signingCredentials: credentials);
 
+           
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }

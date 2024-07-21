@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
+      "projectUniqueName": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
       "projectName": "MeetingProject.Model",
-      "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
+      "projectPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\MeetingProject.Model.csproj",
       "packagesPath": "C:\\Users\\ALPAY\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingPro\\MeetingProject\\MeetingProject.Model\\obj\\",
+      "outputPath": "C:\\Users\\ALPAY\\Desktop\\MeetingProject_\\MeetingProject\\MeetingProject.Model\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALPAY\\AppData\\Roaming\\NuGet\\NuGet.Config",
